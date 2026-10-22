@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f7f5ef">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="随行小助手">
+<meta name="description" content="工作、健康与出差随行小助手。">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<title>随行小助手</title>
+<style>
+:root{--ink:#1b2928;--muted:#71807c;--forest:#235b4b;--forest2:#367460;--mint:#e9f2eb;--cream:#f7f5ef;--line:#e6e8e0;--card:#fff;--gold:#d99e4d;--shadow:0 12px 35px rgba(24,59,47,.065);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);color-scheme:light}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);font-size:16px;min-width:300px;padding-bottom:calc(96px + env(safe-area-inset-bottom))}button,input,textarea{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #b4d1c4;outline-offset:2px}button:disabled{cursor:not-allowed;opacity:.5}.shell{max-width:760px;margin:0 auto;padding:24px 19px}.topline{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:26px}.brand{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:750;letter-spacing:.04em}.brand-logo{width:38px;height:38px;border-radius:15px;display:grid;place-items:center;background:var(--forest);color:white;font-size:21px}.date-badge{border:1px solid #dedfd7;border-radius:100px;padding:8px 12px;color:#5f6966;font-size:12px;background:rgba(255,255,255,.7);white-space:nowrap}.eyebrow{font-size:12px;letter-spacing:.19em;font-weight:800;color:var(--forest2);margin:0 0 9px;text-transform:uppercase}.page-title{font-family:Georgia,"Songti SC",serif;font-size:34px;letter-spacing:-.03em;line-height:1.25;margin:0 0 10px;font-weight:650}.subtitle{font-size:14px;line-height:1.8;color:var(--muted);margin:0 0 22px}.hero{position:relative;overflow:hidden;padding:31px 27px 29px;border-radius:28px;background:linear-gradient(135deg,#245f4e 0%,#183d33 100%);color:#fff;box-shadow:0 18px 45px rgba(26,76,55,.18);margin-bottom:20px}.hero:after{position:absolute;content:"";width:200px;height:200px;border:1px solid rgba(255,255,255,.17);right:-45px;top:-58px;border-radius:50%;box-shadow:0 0 0 37px rgba(255,255,255,.035),0 0 0 74px rgba(255,255,255,.022);pointer-events:none}.hero .eyebrow{color:#cde2cf}.hero h1{font-family:Georgia,"Songti SC",serif;font-size:34px;font-weight:650;letter-spacing:-.02em;line-height:1.3;margin:0 0 13px;max-width:450px}.hero p{line-height:1.9;max-width:420px;color:#e4f0e8;font-size:14px;margin:0 0 20px}.section-heading{display:flex;align-items:baseline;justify-content:space-between;margin:30px 1px 15px}.section-heading h2{font-size:19px;letter-spacing:-.02em;margin:0;font-weight:780}.section-heading span{font-size:12px;color:#7c8883}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.tile{border:1px solid #e7ebe5;background:#fff;border-radius:21px;padding:19px;text-align:left;box-shadow:var(--shadow);min-height:176px;display:flex;flex-direction:column;align-items:flex-start;transition:transform .12s ease,box-shadow .12s ease}.tile:active{transform:scale(.98)}.tile .tile-icon{display:grid;place-items:center;background:var(--mint);width:47px;height:47px;border-radius:16px;font-size:22px;margin-bottom:20px}.tile strong{font-size:17px;margin-bottom:7px}.tile small{font-size:12px;color:var(--muted);line-height:1.6}.notice{margin-top:18px;padding:16px 17px;border:1px solid #dfe9df;background:#f0f6ef;border-radius:17px;font-size:12px;line-height:1.85;color:#526c60}.card{background:white;border:1px solid #e9eae5;border-radius:21px;padding:20px 19px;box-shadow:var(--shadow);margin-bottom:13px}.card h3{font-size:17px;margin:0 0 7px}.card p{font-size:13px;color:var(--muted);line-height:1.9;margin:0}.card .lead{font-size:14px;color:#4b6259}.tag{display:inline-block;font-size:11px;letter-spacing:.03em;background:#edf4ed;color:#376d51;padding:5px 9px;border-radius:999px;font-weight:750;margin-bottom:12px}.steps{counter-reset:step;margin:19px 0 0;padding:0;list-style:none}.steps li{position:relative;padding:3px 0 18px 42px;font-size:14px;line-height:1.8;color:#4b5a55;min-height:42px}.steps li:last-child{padding-bottom:3px}.steps li:before{counter-increment:step;content:counter(step);position:absolute;top:2px;left:0;width:27px;height:27px;line-height:27px;text-align:center;border-radius:10px;background:#e5f1e9;color:#285b43;font-size:12px;font-weight:800}.label{font-size:12px;color:#687770;font-weight:750;display:block;margin-bottom:7px}.field{width:100%;border-radius:13px;border:1px solid #dfe5df;padding:12px 13px;background:#fcfdfb;color:var(--ink);outline:0;min-height:46px}.field:focus{border-color:#6d9c87}textarea.field{min-height:140px;resize:vertical;line-height:1.9}.form-row{margin-top:14px}.btn{border:0;border-radius:13px;background:var(--forest);color:#fff;font-weight:700;font-size:14px;padding:12px 18px;min-height:45px}.btn.secondary{color:var(--forest);background:#edf3ed}.btn.ghost{border:1px solid #dde4de;color:#55655d;background:#fff}.btn.danger{background:#fff1ef;color:#984b45}.button-row{display:flex;flex-wrap:wrap;gap:9px;margin-top:15px}.muted{color:var(--muted);font-size:12px;line-height:1.8}.trip-status{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:13px;margin:5px 0 10px;color:#556960}.progress{height:10px;background:#e8eee8;border-radius:10px;overflow:hidden}.progress>div{height:100%;background:linear-gradient(90deg,#2d745c,#75a28c);border-radius:10px;transition:width .2s}.tasklist{list-style:none;margin:16px 0 0;padding:0}.tasklist li{min-height:57px;display:flex;align-items:center;gap:11px;border-top:1px solid #f0f1ed}.tasklist li:first-child{border-top:0}.task-check{width:23px;height:23px;accent-color:var(--forest);cursor:pointer;flex-shrink:0}.task-text{flex:1;font-size:14px;line-height:1.6;word-break:break-word}.task-text.done{text-decoration:line-through;color:#9aa49e}.icon-button{background:none;border:none;color:#86948c;font-size:21px;padding:8px 7px;min-width:34px}.add-row{display:flex;gap:8px;margin-top:12px}.add-row input{flex:1;min-width:0}.add-row button{flex-shrink:0}.trip-card-title{font-weight:780;font-size:19px;margin:0 0 6px}.bottom-nav{position:fixed;z-index:20;bottom:0;left:0;right:0;padding-bottom:env(safe-area-inset-bottom);border-top:1px solid #e4e9e2;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}.nav-inner{display:flex;max-width:760px;margin:auto;min-height:68px}.nav-btn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;background:transparent;border:0;color:#86938c;gap:5px;font-size:11px;font-weight:700;min-width:0}.nav-btn .ico{font-size:20px;line-height:24px}.nav-btn.active{color:var(--forest)}.page{display:none;animation:fade .13s ease}.page.active{display:block}@keyframes fade{from{opacity:.6;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}.toast{position:fixed;left:50%;bottom:calc(92px + env(safe-area-inset-bottom));transform:translateX(-50%);padding:12px 17px;background:#1c3930;color:white;box-shadow:0 8px 25px #0002;border-radius:100px;font-size:13px;z-index:40;display:none;max-width:min(92vw,520px);text-align:center}.toast.show{display:block}.fineprint{margin-top:22px;font-size:11px;line-height:1.85;color:#84948a}.switchline{display:flex;align-items:center;justify-content:space-between;gap:10px}.separator{height:1px;background:#edf0eb;margin:18px 0}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+@media(max-width:380px){.grid{gap:10px}.tile{padding:15px;min-height:170px}.page-title,.hero h1{font-size:29px}.shell{padding:18px 13px}.hero{padding:25px 20px}.tile strong{font-size:15px}.tile small{font-size:11px}.nav-btn{font-size:10px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:0.01ms!important;transition-duration:0.01ms!important}html{scroll-behavior:auto}}
+
+/* Larger text and calm, consistent controls. */
+:root{--muted:#586b62}
+body{font-size:17px}.shell{padding:22px 20px}.topline{margin-bottom:12px}.brand{font-size:16px;letter-spacing:0}.brand-logo{border-radius:12px}.date-badge{font-size:13px;padding:7px 10px}
+.icon{width:22px;height:22px;display:inline-block;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;vertical-align:-4px;flex-shrink:0}
+.save-status{display:flex;align-items:flex-start;gap:8px;margin:0 0 19px;font-size:14px;line-height:1.65;color:#52675c}.status-dot{width:7px;height:7px;border-radius:50%;background:#508264;flex-shrink:0;margin-top:8px}.save-status.error{color:#8c3629;background:#fff0e9;border:1px solid #e8beb1;border-radius:12px;padding:10px 12px}.save-status.error .status-dot{background:#a74331}
+.hero{padding:23px 23px 24px;border-radius:23px;margin-bottom:24px}.hero h1,.page-title{font-family:inherit;font-size:29px;font-weight:750;letter-spacing:0}.hero p{font-size:17px;line-height:1.9;margin:0;max-width:580px;color:#f0f6f1}.hero:after{opacity:.55}
+.section-heading{margin:0 0 14px}.section-heading h2{font-size:21px}.grid{grid-template-columns:1fr;gap:12px}
+.tile{display:grid;grid-template-columns:52px minmax(0,1fr);column-gap:16px;row-gap:5px;align-content:center;min-height:118px;padding:20px 21px;border-radius:19px}.tile .tile-icon{grid-column:1;grid-row:1/3;width:52px;height:52px;margin:0;border-radius:15px;align-self:center;color:var(--forest)}.tile-icon .icon{width:27px;height:27px}.tile strong{grid-column:2;grid-row:1;font-size:21px;margin:0;line-height:1.4}.tile small{grid-column:2;grid-row:2;font-size:15px;line-height:1.65;color:var(--muted)}
+.notice{font-size:15px;line-height:1.9;padding:17px 18px}.notice .icon{width:19px;height:19px}.subtitle{font-size:17px;line-height:1.85}.card{padding:21px 19px}.card h3{font-size:20px;line-height:1.55;margin-bottom:10px}.card h3 .icon{margin-right:5px}.card p,.card .lead{font-size:16px;line-height:1.9}.tag{font-size:14px}.steps li{font-size:17px;line-height:1.85;padding-left:39px}.steps li:before{font-size:14px}.label{font-size:16px}.field{font-size:17px;min-height:50px}.btn{font-size:16px;min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:7px}.btn .icon{width:20px;height:20px}.button-row{gap:10px}.trip-card-title{font-size:21px}.trip-status{font-size:16px;margin:16px 0 12px}.progress{height:11px}
+.tasklist li{gap:0;align-items:stretch}.task-label{display:flex;align-items:center;gap:13px;flex:1;min-width:0;min-height:66px;padding:16px 5px;cursor:pointer;border-radius:10px;-webkit-tap-highlight-color:#e1eee4}.task-label:active{background:#edf4ee}.task-label:focus-within{outline:2px solid #6d9c87;outline-offset:1px}.task-check{width:25px;height:25px;margin:0;flex-shrink:0}.task-text{font-size:17px;line-height:1.75}.task-text.done{color:#63766b}.icon-button{display:flex;align-items:center;justify-content:center;min-width:46px;min-height:48px;color:#64786c;padding:10px}.icon-button:hover{color:#984b45;background:#fff1ef;border-radius:10px}
+.nav-inner{min-height:76px}.nav-btn{font-size:14px;gap:5px;color:#5b6e63}.nav-btn .ico{height:25px;line-height:25px}.nav-btn .icon{width:24px;height:24px}.nav-btn.active{background:#edf4ee}.toast{font-size:16px;line-height:1.7;border-radius:16px;width:max-content;max-width:calc(100vw - 32px);bottom:calc(96px + env(safe-area-inset-bottom))}.fineprint{font-size:14px;line-height:1.9;color:#5d7065}
+@media(min-width:620px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tile{grid-template-columns:1fr;min-height:190px}.tile .tile-icon,.tile strong,.tile small{grid-column:1;grid-row:auto}.tile .tile-icon{margin-bottom:7px}}
+@media(max-width:380px){.shell{padding:18px 15px}.brand{font-size:15px;gap:8px}.date-badge{font-size:12px;padding:7px 8px}.hero{padding:21px 19px}.hero h1,.page-title{font-size:27px}.tile{padding:18px 16px;column-gap:13px}.tile strong{font-size:20px}.tile small{font-size:15px}.nav-btn{font-size:14px}.switchline{flex-wrap:wrap}}
+</style>
+<link rel="stylesheet" href="workbench.css">
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"><defs><symbol id="icon-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></symbol><symbol id="icon-health" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v8m-4-4h8"/></symbol><symbol id="icon-trip" viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="14" rx="2"/><path d="M9 7V3h6v4M8 11v6m8-6v6"/></symbol><symbol id="icon-settings" viewBox="0 0 24 24"><path d="m10 3-1 3-3 1-3 3 2 3-1 3 3 3 3-1 3 2 3-2 3-3-1-3 2-3-3-3-3-1-1-3Z"/><circle cx="12" cy="12" r="3"/></symbol><symbol id="icon-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v2"/></symbol><symbol id="icon-pill" viewBox="0 0 24 24"><path d="m8 3-5 5a6 6 0 0 0 8 8l5-5a6 6 0 0 0-8-8ZM6 6l8 8"/></symbol><symbol id="icon-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v.01"/></symbol><symbol id="icon-alert" viewBox="0 0 24 24"><path d="m12 3 10 18H2Zm0 6v5m0 3v.01"/></symbol><symbol id="icon-archive" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="5" rx="1"/><path d="M5 8v13h14V8m-10 5h6"/></symbol><symbol id="icon-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 18h4"/></symbol><symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol><symbol id="icon-upload" viewBox="0 0 24 24"><path d="M12 15V3m-5 5 5-5 5 5M4 16v5h16v-5"/></symbol><symbol id="icon-reset" viewBox="0 0 24 24"><path d="M3 10a9 9 0 1 1 1 7M3 4v6h6"/></symbol><symbol id="icon-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V3H3v13h5"/></symbol><symbol id="icon-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol><symbol id="icon-trash" viewBox="0 0 24 24"><path d="M3 6h18M9 6V3h6v3M5 6l1 15h12l1-15M10 10v7m4-7v7"/></symbol><symbol id="icon-work" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="15" rx="2"/><path d="M9 6V3h6v3M3 12h18m-11 0v3h2v-3"/></symbol><symbol id="icon-edit" viewBox="0 0 24 24"><path d="m15 4 5 5M4 20l5-1L21 7a2 2 0 0 0-5-5L4 14ZM4 20h16"/></symbol></defs></svg>
+<div class="shell">
+  <header class="topline"><div class="brand"><span class="brand-logo" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-trip"/></svg></span> 随行小助手</div><div class="date-badge" id="todayBadge">今天</div></header>
+  <div class="save-status" id="saveStatus" role="status" aria-live="polite"><span class="status-dot" aria-hidden="true"></span><span id="saveStatusText">更改会自动保存在本机</span></div>
+  <main>
+    <section class="page active" id="page-home" aria-label="首页">
+<div class="hero"><h1 id="homeHello">随行小助手</h1><p>日子忙忙碌碌，也别忘了按时休息，记得按时吃药，管理好自己的血压，少喝酒。</p></div>
+      <div class="section-heading"><h2>今天，从这里开始</h2></div>
+      <div class="grid">
+<button class="tile work-entry" type="button" data-go="work"><span class="tile-icon" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-work"/></svg></span><strong>工作台</strong><small id="homeWorkSummary">今日重点、交办跟进、随手记</small><span class="sr-only" id="workAttention"></span></button>
+        <button class="tile" type="button" data-go="health"><span class="tile-icon" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-health"/></svg></span><strong>健康指引</strong><small>血压记录、用药设置的操作指引</small></button>
+        <button class="tile" type="button" data-go="trip"><span class="tile-icon" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-trip"/></svg></span><strong>出差助手</strong><small>准备物品，查看完成进度</small></button>
+      </div>
+      <div class="notice"><strong><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-lock"/></svg> 私密、简单。</strong> 药品、服药确认和血压数据建议记录在 iPhone 自带的「健康」App。本网页不会读取苹果健康数据，也不会自行发送用药提醒。</div>
+    </section>
+    <section class="page" id="page-work" aria-label="工作台">
+      <h1 class="page-title">工作台</h1>
+      <div class="work-tabs" role="group" aria-label="工作台功能">
+        <button type="button" class="work-tab active" data-work-tab="focus" aria-pressed="true">今日重点</button>
+        <button type="button" class="work-tab" data-work-tab="delegations" aria-pressed="false">交办跟进</button>
+        <button type="button" class="work-tab" data-work-tab="notes" aria-pressed="false">随手记</button>
+        <button type="button" class="work-tab" data-work-tab="prompts" aria-pressed="false">AI 帮手</button>
+      </div>
+      <div class="work-panel" id="work-focus">
+        <div class="card">
+          <div class="switchline"><h2 class="work-heading">先抓住三件事</h2><span id="focusSummary" class="work-summary" aria-live="polite"></span></div>
+          <ul class="tasklist work-list" id="focusList"></ul>
+          <p class="empty-state" id="focusEmpty">今天，先推进哪件事？</p>
+          <form id="focusForm" class="focus-add">
+            <label class="sr-only" for="focusTitle">添加重点，每天最多三件</label>
+            <input class="field" id="focusTitle" maxlength="160" placeholder="写下一件重要的事" required>
+            <button class="btn" type="submit" id="focusSubmit">添加</button><button class="btn ghost" type="button" id="focusCancel" hidden>取消</button>
+          </form>
+          <details class="quiet-tools" id="focusHistory"><summary>其他日期</summary><label class="label" for="focusDate">选择日期</label><input class="field compact-date" id="focusDate" type="date"><p class="muted">以前的安排会保留在原日期。</p></details>
+        </div>
+      </div>
+      <div class="work-panel" id="work-delegations" hidden>
+        <details class="card work-details" id="delegationDetails">
+          <summary id="delegationFormHeading">＋ 新增交办</summary>
+          <form id="delegationForm">
+            <div class="form-row"><label class="label" for="delegationTitle">交办什么事？</label><input class="field" id="delegationTitle" maxlength="200" placeholder="写清期望的结果" required></div>
+            <div class="form-row"><label class="label" for="delegationOwner">交给谁？</label><input class="field" id="delegationOwner" maxlength="60" placeholder="姓名或角色，可稍后填写"></div>
+            <div class="form-row"><label class="label" for="delegationDue">什么时候要结果？</label><input class="field" id="delegationDue" type="date"></div>
+            <details class="quiet-tools" id="delegationMore"><summary>跟进时间与补充说明</summary>
+              <div class="form-row"><label class="label" for="delegationFollow">下次跟进</label><input class="field" id="delegationFollow" type="date"></div>
+              <div class="form-row"><label class="label" for="delegationStatus">状态</label><select class="field" id="delegationStatus"><option value="active">进行中</option><option value="waiting">等反馈</option><option value="done">已完成</option></select></div>
+              <div class="form-row"><label class="label" for="delegationProgress">进展或说明</label><textarea class="field work-textarea" id="delegationProgress" maxlength="2000" placeholder="有实际反馈时再补充"></textarea></div>
+            </details>
+            <div class="button-row"><button class="btn" type="submit" id="delegationSubmit">保存交办</button><button class="btn ghost" type="button" id="delegationCancel" hidden>取消</button></div>
+          </form>
+        </details>
+        <div class="list-toolbar"><p class="muted" id="delegationSummary" aria-live="polite"></p><details class="quiet-tools filter-tools"><summary>筛选</summary><label class="sr-only" for="delegationFilter">查看事项</label><select class="field" id="delegationFilter"><option value="active">未完成</option><option value="due">今日跟进 / 已逾期</option><option value="waiting">等反馈</option><option value="done">已完成</option><option value="all">全部未归档</option><option value="archived">已归档</option></select></details></div>
+        <div id="delegationList"></div><p class="empty-state card" id="delegationEmpty">暂无待跟进事项。</p>
+      </div>
+      <div class="work-panel" id="work-notes" hidden>
+        <form class="card" id="noteForm">
+          <h2 class="work-heading" id="noteFormHeading">记一下</h2>
+          <label class="sr-only" for="noteText">随手记内容</label><textarea class="field work-textarea" id="noteText" maxlength="4000" placeholder="想法、承诺、反馈，先记下来。"></textarea>
+          <div class="note-submit-row"><span class="muted">草稿自动保存</span><div class="button-row"><button class="btn" type="submit" id="noteSubmit">记下来</button><button class="btn ghost" type="button" id="noteCancel" hidden>取消</button></div></div>
+        </form>
+        <details class="quiet-tools note-tools"><summary>查找与归档</summary><label class="sr-only" for="noteSearch">查找记录</label><input class="field" id="noteSearch" type="search" placeholder="搜索关键词"><label class="sr-only" for="noteFilter">记录范围</label><select class="field" id="noteFilter"><option value="active">未归档</option><option value="archived">已归档</option></select></details>
+        <div id="noteList"></div><p class="empty-state card" id="noteEmpty">还没有记录。</p>
+      </div>
+      <div class="work-panel" id="work-prompts" hidden>
+        <div class="card">
+          <h2 class="work-heading">让 AI 帮你整理</h2><p class="work-intro">选场景、填背景，再复制给常用的 AI。</p>
+          <div class="form-row"><label class="label" for="promptCards">想处理什么？</label><select class="field" id="promptCards" aria-label="工作场景"></select></div>
+          <div class="form-row"><label class="label" for="promptInput" id="promptInputLabel">补充信息</label><textarea class="field" id="promptInput" maxlength="12000"></textarea></div>
+          <label class="context-choice"><input type="checkbox" class="task-check" id="promptIncludeContext"><span>带上工作记录</span></label>
+          <button class="btn prompt-copy" type="button" id="copyWorkPrompt">复制提示词</button>
+          <details class="quiet-tools" id="promptPreviewDetails"><summary>查看完整提示词</summary><label class="sr-only" for="promptPreview">完整提示词预览</label><textarea class="field prompt-preview" id="promptPreview" readonly></textarea><div class="button-row"><button class="btn ghost" type="button" id="downloadWorkPrompt">下载提示词</button></div></details>
+          <details class="quiet-tools" id="workPreferences"><summary>岗位、偏好与导出</summary>
+            <div class="form-row"><label class="label" for="workRole">岗位</label><input class="field" id="workRole" maxlength="100" placeholder="例如：公司总经理"></div>
+            <div class="form-row"><label class="label" for="workBackground">职责与回复偏好</label><textarea class="field work-textarea" id="workBackground" maxlength="4000" placeholder="例如：先给结论，再列需要我拍板的事项。"></textarea></div>
+            <p class="muted work-help">带入范围：今日重点、最多 30 条未完成交办、最近 10 条随手记。岗位与偏好始终带入；本页不会自动发送资料。</p>
+            <div class="button-row"><button class="btn ghost" id="exportWorkMarkdown" type="button">导出全部工作记录</button></div><p class="muted work-help">Markdown 用于阅读；恢复网页数据请到设置导入 JSON 备份。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="page-health" aria-label="健康指引">
+      <h1 class="page-title">健康指引</h1><p class="subtitle">把重要的健康记录放在苹果「健康」App 里。第一次使用，只需要跟着下面的步骤操作。</p>
+      <article class="card"><span class="tag">血压记录</span><h3><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-health"/></svg> 记录一次血压</h3><p class="lead">测量后，把收缩压（高压）和舒张压（低压）记录在苹果健康中。</p><ol class="steps"><li>在 iPhone 主屏幕上找到并打开<strong>「健康」App</strong>（白底红心图标）。</li><li>进入<strong>「浏览 / 搜索」</strong>，找到<strong>「心脏」→「血压」</strong>。不同系统版本显示可能略有不同。</li><li>选择<strong>「添加数据」</strong>，填写高压、低压和测量时间后保存。</li><li>以后在同一个页面查看历史记录和趋势。</li></ol></article>
+      <article class="card"><span class="tag">用药管理</span><h3><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-pill"/></svg> 设置服药提醒</h3><p class="lead">第一次由本人根据医生或药师确认的药名、剂量、服药时间设置。</p><ol class="steps"><li>打开<strong>「健康」App</strong>，进入<strong>「浏览 / 搜索」→「用药」</strong>。</li><li>选择<strong>「添加药物」</strong>，按药盒和医嘱逐项填写药品信息与服药计划。</li><li>按需开启用药提醒；在系统设置中确认「健康」App 的通知权限。</li><li>实际服药后，可在苹果「健康」App 的用药页面标记已服药。</li></ol><div class="notice"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-alert"/></svg> 本网页不会推荐药物、改变用药时间或建议补品。特别是甲状腺激素类药物，补充剂及饮食可能影响吸收，任何调整都应咨询医生或药师。</div></article>
+      <article class="card"><h3><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-info"/></svg> 找不到健康 App？</h3><p>从 iPhone 主屏幕向下轻扫，搜索「健康」。如果步骤与手机画面不同，可在健康 App 中用搜索查找「血压」或「用药」。普通网页不能直接读取 HealthKit，也不能确保一键跳转到指定的健康记录页面。</p></article>
+    </section>
+    <section class="page" id="page-trip" aria-label="出差助手">
+      <h1 class="page-title">出差助手</h1><p class="subtitle">行程可以忙，准备不用慌。勾选完成的事项，下次出发前还可以一键重新开始。</p>
+      <div class="card"><h3>这次去哪里？</h3><div class="form-row"><label class="label" for="destination">目的地（选填）</label><input class="field" id="destination" maxlength="80" placeholder="例如：北京 · 商务出差" autocomplete="off"></div><div class="form-row"><label class="label" for="departDate">出发日期（选填）</label><input class="field" id="departDate" type="date"></div></div>
+      <div class="card"><div class="switchline"><div><div class="trip-card-title">出发前检查清单</div><p>点击整行即可勾选或取消</p></div><span class="tag" style="margin:0">可自定义</span></div><div class="trip-status"><span id="tripCount">0 / 0 项已完成</span><span id="tripPercent">0%</span></div><div class="progress" role="progressbar" aria-label="出差准备完成进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="tripProgress"><div id="tripBar" style="width:0%"></div></div><ul class="tasklist" id="taskList"></ul><form class="add-row" id="addTaskForm"><label class="sr-only" for="newTask">新增准备事项</label><input class="field" id="newTask" maxlength="100" placeholder="新增一项准备事项…" required><button class="btn" type="submit"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-plus"/></svg>添加</button></form><div class="button-row"><button class="btn secondary" id="resetTrip" type="button"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-reset"/></svg> 重新开始检查</button><button class="btn ghost" id="copyTrip" type="button"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-copy"/></svg>复制清单</button></div></div>
+      <div class="notice">小提示：出差期间如跨时区，应按医生或药师建议确认用药时间；清单只提醒“带药”，不替代具体医嘱。</div>
+    </section>
+<section class="page" id="page-settings" aria-label="设置与备份">
+      <h1 class="page-title">我的设置</h1><p class="subtitle">网页中的设置、出差清单和工作台记录仅保存在当前设备的浏览器里。</p>
+      <div class="card"><h3><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-archive"/></svg> 备份与恢复</h3><p>导出一份 JSON 备份文件，换手机或重新部署后，可以手动导入。备份包含网页设置、出差清单和全部工作台记录（含草稿和归档），不包含苹果健康 App 的任何医疗记录。</p><div class="button-row"><button class="btn secondary" type="button" id="exportBtn"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-download"/></svg> 导出备份</button><button class="btn ghost" type="button" id="importBtn"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-upload"/></svg> 导入备份</button><input type="file" id="importFile" accept=".json,application/json" class="sr-only"></div><div class="separator"></div><button class="btn danger" type="button" id="clearBtn">清空网页数据</button></div>
+      <div class="card"><h3><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-phone"/></svg> 添加到 iPhone 主屏幕</h3>ol class="steps"><li>在 iPhone 的 <strong>Safari 浏览器</strong>中打开本助手。若从微信进入，可选择“在 Safari 中打开”。</li><li>点击 Safari 的<strong>共享</strong>按钮（部分布局在页面菜单内），选择<strong>“添加到主屏幕”</strong>。</li><li>如果出现<strong>“作为网页 App 打开”</strong>，将它开启；名称保留“随行小助手”，点击<strong>“添加”</strong>。</li><li>回到主屏幕点击图标。若要迁移原记录，在这个入口中打开<strong>设置 → 导入备份</strong>，选择之前导出的 JSON 文件。</li></ol><p id="installStatus" role="status">首次请保持联网，等离线文件准备完成。个人记录保存在本机，建议定期导出备份。</p></div>
+      <p class="fineprint">隐私说明：本应用无账号、无广告、无后台收集。仅使用当前浏览器的 localStorage 保存网页内容。工作记录不会自动上传；复制或导出给 AI 前，请检查所含信息。清理浏览器数据可能清除本地内容，建议保留备份。本工具不提供医疗诊断或紧急提醒。</p>
+    </section>
+  </main>
+</div>
+<nav class="bottom-nav" aria-label="主导航"><div class="nav-inner"><button class="nav-btn active" aria-current="page" data-go="home" type="button"><span class="ico" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-home"/></svg></span>首页</button><button class="nav-btn" data-go="work" type="button"><span class="ico" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-work"/></svg></span>工作台</button><button class="nav-btn" data-go="health" type="button"><span class="ico" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-health"/></svg></span>健康</button><button class="nav-btn" data-go="trip" type="button"><span class="ico" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-trip"/></svg></span>出差</button><button class="nav-btn" data-go="settings" type="button"><span class="ico" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-settings"/></svg></span>设置</button></div></nav>
+<div class="toast" role="status" aria-live="polite" id="toast"></div>
+<script src="workbench.js"></script>
+<script>
+(()=>{'use strict';
+const KEY='dad-companion-v1';
+const BASE_TASKS=['身份证 / 护照 / 签证（如需）','机票 / 车票 / 酒店信息','手机 / 充电器 / 转换插头','常用药品与必要处方','钱包 / 银行卡 / 证件备份','会议资料 / 工作电脑','衣物 / 洗漱用品','血压计（如需）','紧急联系人 / 保险信息'];
+const DEFAULT_GREETING="日子忙忙碌碌，也别忘了按时休息，记得按时吃药，管理好自己的血压，少喝酒。";
+const defaults=()=>({version:1,work:CompanionWorkbench.defaults(),fatherName:'爸爸',fromName:'你的孩子',greeting:DEFAULT_GREETING,welcomeSeen:false,destination:'',departDate:'',tasks:BASE_TASKS.map((title,i)=>({id:'default-'+i,title,done:false,custom:false}))});
+const limit=(s,n)=>String(s??'').slice(0,n);
+function normalize(raw){const d=defaults();if(!raw||typeof raw!=='object'||Array.isArray(raw))return d;if(raw.work!==undefined&&!CompanionWorkbench.valid(raw.work))throw new Error('工作台数据格式不支持');d.work=CompanionWorkbench.normalize(raw.work);d.fatherName=limit(raw.fatherName||'爸爸',30);d.fromName=limit(raw.fromName||'你的孩子',40);d.greeting=DEFAULT_GREETING;d.welcomeSeen=raw.welcomeSeen===true;if(typeof raw.savedAt==='string'&&!Number.isNaN(Date.parse(raw.savedAt)))d.savedAt=raw.savedAt;d.destination=limit(raw.destination||'',80);d.departDate=/^\d{4}-\d{2}-\d{2}$/.test(raw.departDate||'')?raw.departDate:'';if(Array.isArray(raw.tasks)){const ids=new Set();d.tasks=raw.tasks.slice(0,150).filter(x=>x&&typeof x.title==='string').map((x,i)=>({id:limit(x.id||'import-'+i,100),title:limit(x.title.trim(),100),done:x.done===true,custom:x.custom===true})).filter(x=>x.title&&!ids.has(x.id)&&ids.add(x.id));}return d;}
+let state;let storageOK=true;let loadedFromStorage=false;
+try{const raw=localStorage.getItem(KEY);state=raw?normalize(JSON.parse(raw)):defaults();loadedFromStorage=!!raw;}catch(e){state=defaults();storageOK=false;}
+const $=id=>document.getElementById(id);let toastTimer;
+function toast(message){const el=$('toast');el.textContent=message;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),3500);}
+function updateSaveStatus(message,isError=false){$('saveStatusText').textContent=message;$('saveStatus').classList.toggle('error',isError);}
+function savedTime(value){return new Intl.DateTimeFormat('zh-CN',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).format(new Date(value));}
+function save(successMessage='',failureMessage='更改尚未保存到本机，请导出备份后再关闭页面。'){
+  try{const savedAt=new Date().toISOString();localStorage.setItem(KEY,JSON.stringify({...state,savedAt}));state.savedAt=savedAt;storageOK=true;updateSaveStatus('已保存到本机 · '+savedTime(savedAt));if(successMessage)toast(successMessage);return true;}
+  catch(e){storageOK=false;updateSaveStatus(failureMessage,true);toast(failureMessage);return false;}
+}
+function go(page){for(const el of document.querySelectorAll('.page'))el.classList.toggle('active',el.id==='page-'+page);for(const btn of document.querySelectorAll('.nav-btn')){const active=btn.dataset.go===page;btn.classList.toggle('active',active);if(active)btn.setAttribute('aria-current','page');else btn.removeAttribute('aria-current');}window.scrollTo({top:0,behavior:'instant'});if(page==='work')work.onNavigate();}
+for(const btn of document.querySelectorAll('[data-go]'))btn.addEventListener('click',()=>go(btn.dataset.go));
+function renderIntro(){const today=new Date();$('todayBadge').textContent=new Intl.DateTimeFormat('zh-CN',{month:'long',day:'numeric',weekday:'short'}).format(today);}
+function renderTripProgress(){const count=state.tasks.filter(x=>x.done).length,total=state.tasks.length;const pct=total?Math.round(count/total*100):0;$('tripCount').textContent=`${count} / ${total} 项已完成`;$('tripPercent').textContent=pct+'%';$('tripBar').style.width=pct+'%';$('tripProgress').setAttribute('aria-valuenow',pct);}
+function renderTrip(){const list=$('taskList');list.replaceChildren();renderTripProgress();
+state.tasks.forEach(t=>{
+const li=document.createElement('li');const label=document.createElement('label');label.className='task-label';
+const check=document.createElement('input');check.type='checkbox';check.className='task-check';check.checked=t.done;check.setAttribute('aria-label','完成：'+t.title);
+const span=document.createElement('span');span.className='task-text'+(t.done?' done':'');span.textContent=t.title;
+check.addEventListener('change',()=>{t.done=check.checked;span.classList.toggle('done',t.done);save();renderTripProgress();});
+label.append(check,span);li.append(label);
+if(t.custom){const del=document.createElement('button');del.className='icon-button';del.type='button';
+del.innerHTML='<svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-trash"/></svg>';
+del.setAttribute('aria-label','删除：'+t.title);del.addEventListener('click',()=>{state.tasks=state.tasks.filter(x=>x.id!==t.id);save();renderTrip();});li.append(del);}list.append(li);
+});$('destination').value=state.destination;$('departDate').value=state.departDate;}
+$('addTaskForm').addEventListener('submit',e=>{e.preventDefault();const input=$('newTask'),title=input.value.trim();if(!title)return;if(state.tasks.length>=150)return toast('最多保存 150 项清单');state.tasks.push({id:'custom-'+Date.now()+'-'+Math.random().toString(36).slice(2,8),title:limit(title,100),done:false,custom:true});input.value='';save();renderTrip();});
+$('destination').addEventListener('input',e=>{state.destination=limit(e.target.value,80);save();});$('departDate').addEventListener('change',e=>{state.departDate=e.target.value;save();});
+$('resetTrip').addEventListener('click',()=>{if(!confirm('要把所有准备事项恢复为“未完成”吗？自定义事项会保留。'))return;state.tasks.forEach(t=>t.done=false);save('已重新开始检查并保存到本机');renderTrip();});
+$('copyTrip').addEventListener('click',async()=>{const lines=[state.destination?'目的地：'+state.destination:'出差准备清单',state.departDate?'出发日期：'+state.departDate:'',...state.tasks.map(x=>(x.done?'☑ ':'□ ')+x.title)].filter(Boolean).join('\n');try{await navigator.clipboard.writeText(lines);toast('清单已复制，可以粘贴到微信');}catch(e){const ta=document.createElement('textarea');ta.value=lines;ta.style.position='fixed';ta.style.left='-9999px';document.body.append(ta);ta.select();let ok=false;try{ok=document.execCommand('copy');}catch(_){}ta.remove();toast(ok?'清单已复制':'当前浏览器不支持复制，请使用导出备份');}});
+$('exportBtn').addEventListener('click',()=>{const blob=new Blob([JSON.stringify({...state,exportedAt:new Date().toISOString()},null,2)],{type:'application/json;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='随行小助手-备份-'+new Date().toISOString().slice(0,10)+'.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),5000);toast('已准备备份文件，请保存到安全位置');});
+$('importBtn').addEventListener('click',()=>$('importFile').click());$('importFile').addEventListener('change',async e=>{const f=e.target.files?.[0];e.target.value='';if(!f)return;if(f.size>8*1024*1024)return toast('备份文件过大，超过 8 MB');try{const raw=JSON.parse(await f.text());if(!raw||raw.version!==1||!Array.isArray(raw.tasks)||(raw.work!==undefined&&!CompanionWorkbench.valid(raw.work)))throw new Error('invalid');if(!confirm('导入备份会覆盖当前网页设置和出差清单。'+(raw.work===undefined?'这份旧版备份不含工作台，将保留当前工作记录。':'工作台记录、草稿和归档也会被备份中的内容替换。')+'确定继续吗？'))return;const currentWork=state.work;state=normalize(raw);if(raw.work===undefined)state.work=currentWork;save('备份已导入并保存到本机','备份已在当前页面恢复，但未保存到本机。请导出备份后再关闭页面。');renderAll();}catch(_){toast('无法读取备份：请选择本应用导出的 JSON 文件');}});
+$('clearBtn').addEventListener('click',()=>{if(!confirm('确定清空网页保存的设置、出差清单和全部工作台记录（含草稿和归档）吗？这个操作不会删除苹果健康 App 的数据。'))return;state=defaults();state.welcomeSeen=true;save('网页数据已重置并保存到本机','当前页面已重置，但未保存到本机。刷新后可能恢复原数据。');renderAll();});
+const work=CompanionWorkbench.init({getState:()=>state,save,toast,go});
+function renderAll(){renderIntro();renderTrip();work.render(true);}
+renderAll();if(!storageOK){updateSaveStatus('无法读取本机数据。请先导出备份或检查浏览器储存权限。',true);}else if(loadedFromStorage){updateSaveStatus(state.savedAt?'已保存到本机 · '+savedTime(state.savedAt):'本机数据已载入 · 更改会自动保存');}
+if('serviceWorker'in navigator&&window.isSecureContext&&location.protocol!=='file:'){
+  navigator.serviceWorker.register('./sw.js').then(()=>navigator.serviceWorker.ready).then(()=>{
+    $('installStatus').textContent='离线文件已准备好。添加到主屏幕后，可从图标打开；个人记录仍保存在本机，请定期导出备份。';
+  }).catch(()=>{$('installStatus').textContent='当前尚未准备好离线文件，请保持联网使用；稍后重新打开页面可再试。';});
+}else{$('installStatus').textContent='添加到 iPhone 主屏幕请使用正式的 HTTPS 网址。当前本地页面的记录可先导出为 JSON，再到手机中导入。';}
+})();
+</script>
+</body>
+</html>
